@@ -29,13 +29,14 @@ export function Contact() {
 
         <div className="mt-20 max-w-lg mx-auto">
           <form
-            name="contact"
+            action="https://formspree.io/f/movvqpqd"  // Replace with your Formspree link
             method="POST"
-            data-netlify="true"
             onSubmit={handleSubmit}
             className="grid grid-cols-1 gap-6"
           >
-            <input type="hidden" name="form-name" value="contact" />
+            {/* Hidden fields for Formspree customizations */}
+            <input type="hidden" name="_next" value="https://your-website.com/thank-you" />  {/* Replace with your thank-you page URL */}
+            <input type="hidden" name="_subject" value="New booking request from contact form" />
             
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
